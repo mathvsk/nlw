@@ -1,0 +1,19 @@
+/* Comentários em CSS */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+a {
+  color: lightgray;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
