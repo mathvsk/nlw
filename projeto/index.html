@@ -19,20 +19,51 @@
         <span><img src="images/build.png" alt="Selo Rockseat"></span>
         <img src="http://lorempixel.com.br/185/185" alt="Foto Pessoal">
       </div>
-      <h1>Matheus</h1>
+      <h1 id="userName">Matheus</h1>
       <a href="">
         <img src="images/github.svg" alt="icone github">
         matheus</a>
 
       <p>An instructor focused on helping pople start programming for web</p>
 
-      <ul>
-        <li><a href="https://www.youtube.com/" target="_blank"><img src="images/youtube.svg" alt="Youtube"></a></li>
-        <li><a href=""><img src="images/insta.svg" alt="Instagram"></a></li>
-        <li><a href=""><img src="images/facebook.svg" alt="Facebook"></a></li>
-        <li><a href=""><img src="images/twitter.svg" alt="Twitter"></a></li>
+      <ul id="socialLinks">
+        <li class="youtube"><a href="https://cursos.fluencyacademy.io/library" target="_blank"><img src="images/youtube.svg" alt="Youtube"></a></li>
+        <li class="instagram"><a href="https://cursos.fluencyacademy.io/library"><img src="images/insta.svg" alt="Instagram"></a></li>
+        <li class="facebook"><a href="https://cursos.fluencyacademy.io/library"><img src="images/facebook.svg" alt="Facebook"></a></li>
+        <li class="twitter"><a href="https://cursos.fluencyacademy.io/library"><img src="images/twitter.svg" alt="Twitter"></a></li>
       </ul>
     </div>
   </main>
+
+  <script>
+    /* function showMeSomething(dado) {
+      alert(dado)
+    }
+     showMeSomething(socialMedia.twitter) */
+
+    const socialMedia = {
+      github: "mathvsk",
+      instagram: "mathvsk",
+      twitter: "mathvsk",
+    }
+    
+    function changeName () {
+      // document.getElementById("userName").textContent = "Matheus Igor Viscki" //
+
+      // Mesma coisa que o modelo de cima, mas de uma forma mais simplicada (Somente utilizando ID pode ser escrito dessa forma) //
+      userName.textContent = "Matheus Igor Viscki"
+    }
+
+    function changeSocialMediaLinks () {
+      for (let li of socialLinks.children) {
+        const social = li.getAttribute("class")
+
+        li.children[0].href = `https://${social}.com/${socialMedia[social]}` 
+      }
+    }
+    
+    changeName()
+    changeSocialMediaLinks()
+  </script>
 </body>
 </html>
